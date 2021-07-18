@@ -29,15 +29,15 @@ def register(request):
     }
     return render(request, "registration/register.html", context)
 
-def password_change(request):
-    if request.method == "POST":
-        form = UserChangeForm(request.POST)
-        if form.is_valid():
-            form.save()
+# def password_change(request):
+#     if request.method == "POST":
+#         form = UserChangeForm(request.POST)
+#         if form.is_valid():
+#             form.save()
 
-    else:
-        form = UserChangeForm()
-    context = {
-        "form": form
-    }
-    return render(request, "registration/password_change.html", context)
+#     else:
+#         form = UserChangeForm()
+#     context = {
+#         "form": form
+#     }
+#     return render(request, "registration/password_change.html", context)
